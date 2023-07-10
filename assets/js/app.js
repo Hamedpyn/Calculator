@@ -89,14 +89,16 @@ deleteAllBtn.addEventListener('click', () => {
 })
 
 // calculating the answer by eval by clicking on equalBtn
-equalBtn.addEventListener('click', () => {
+equalBtn.addEventListener('click', calculatingTheAnswer)
+function calculatingTheAnswer() {
     answerInput.value = eval(answerInput.value)
-})
+}
 
 // deleting last value of answerInput by clicking on [ DEL ]
-deleteLastBtn.addEventListener('click', () => {
+deleteLastBtn.addEventListener('click', deletingLastBtn)
+function deletingLastBtn() {
     answerInput.value = answerInput.value.slice(0, -1)
-})
+}
 
 // * calculating [ sin , cos , log10 , factorial ]
 function mathOperators() {
@@ -179,4 +181,20 @@ $.addEventListener('DOMContentLoaded', () => {
     choosingNumbers()
     lightAndDarkMode()
     mathOperators()
+})
+// keyboard events
+$.addEventListener('keydown', e => {
+    // if key == back space
+    if (e.key == 'Backspace') {
+        // delete the last value from answerInput
+        deletingLastBtn()
+        //  if key == enter
+    }else if(e.key == 'Enter'){
+        // calculate the answer and show it in answerInput
+        calculatingTheAnswer()
+        // if key code was between 48 to 57 ( 0 to 9 ) 
+    }else if(e.keyCode >= 48 && e.keyCode <= 57){
+        // add it to answerInput
+        addingToInput(e.key)
+    }
 })
