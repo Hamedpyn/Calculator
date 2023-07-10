@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="changingMode">
+            <i class="bx bxs-sun" id="theme"></i>
+        </div>
+        <div id="answerPage">
+            <textarea id="anserInput" readonly></textarea>
+        </div>
+        <div id="calculator">
+            <div class="row">
+                <div class="math-operators">x!</div>
+                <div class="math-operators">log</div>
+                <div class="math-operators">sin</div>
+                <div class="math-operators">cos</div>
+            </div>
+            <div class="row">
+                <div class="numbers specialStyle">AC</div>
+                <div class="numbers specialStyle">DEL</div>
+                <div class="numbers differentStyle">/</div>
+                <div class="numbers differentStyle">*</div>
+            </div>
+            <div class="row">
+                <div class="numbers">7</div>
+                <div class="numbers">8</div>
+                <div class="numbers">9</div>
+                <div class="numbers differentStyle">-</div>
+            </div>
+            <div class="row">
+                <div class="numbers">4</div>
+                <div class="numbers">5</div>
+                <div class="numbers">6</div>
+            </div>
+            <div class="row">
+                <div class="numbers">1</div>
+                <div class="numbers">2</div>
+                <div class="numbers">3</div>
+                <div class="numbers plus differentStyle">+</div>
+            </div>
+            <div class="row">
+                <div class="numbers zero">0</div>
+                <div class="numbers">.</div>
+                <div class="numbers equal">=</div>
+            </div>
+        </div>
+
+        <script defer src="assets/js/app.js"></script>
+</body>
+
+</html>
