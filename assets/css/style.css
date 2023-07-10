@@ -5,46 +5,64 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: poppins
+    font-family: poppins;
+    border: none
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-:root{
-    --color-1:#303136;/* bgc body , numbers*/
-    --color-2:#17181a; /* bgc container*/
-    --color-3:#fff;/* textarea color*/
-    --color-4:#29A8FF; /* numbers color*/
-    --color-5:#616161; /* ac , del bgc*/
-    --color-6:#a5a5a5; /* ac , del color*/
-    --color-7:#1991ff; /* equal bgc*/
-    --color-8:#b2daff; /* equal color*/
-    --color-10:#005db2; /* operation bgc*/
-    --color-11:#339dff; /* operation color*/
-    --color-12:#5c5c5c; /* numbers hover*/
-    --color-13:#b2daff; /* equal hover bgc*/
-    --color-14:#50aaff; /* equal hover color*/
-    --color-15:#549ee4; /* operation hover bgc*/
-    --color-16:#cde7ff; /* operation hover color*/
+:root {
+    --color-1: #303136;
+    /* bgc body , numbers*/
+    --color-2: #17181a;
+    /* bgc container*/
+    --color-3: #fff;
+    /* textarea color*/
+    --color-4: #29A8FF;
+    /* numbers color*/
+    --color-5: #616161;
+    /* ac , del bgc*/
+    --color-6: #a5a5a5;
+    /* ac , del color*/
+    --color-7: #1991ff;
+    /* equal bgc*/
+    --color-8: #b2daff;
+    /* equal color*/
+    --color-10: #005db2;
+    /* operation bgc*/
+    --color-11: #339dff;
+    /* operation color*/
+    --color-12: #5c5c5c;
+    /* numbers hover*/
+    --color-13: #b2daff;
+    /* equal hover bgc*/
+    --color-14: #50aaff;
+    /* equal hover color*/
+    --color-15: #549ee4;
+    /* operation hover bgc*/
+    --color-16: #cde7ff;
+    /* operation hover color*/
 
 }
+
 .lightMode {
-    --color-1:#cfd6dd;
-    --color-2:#aaaaaa;
-    --color-3:#000;
-    --color-4:#000000;  
-    --color-5:#dfdfdf;  
-    --color-6:#757575;  
-    --color-7:#868686;  
-    --color-8:#dbdbdb;  
-    --color-10:#969696;  
-    --color-11:#ffffff;  
-    --color-12:#e0e0e0;  
-    --color-13:#000000;  
-    --color-14:#cacaca;  
-    --color-15:#cacaca;  
-    --color-16:#000000;  
+    --color-1: #c2c2c2;
+    --color-2: #b1b1b1;
+    --color-3: #000;
+    --color-4: #000000;
+    --color-5: #dfdfdf;
+    --color-6: #757575;
+    --color-7: #868686;
+    --color-8: #dbdbdb;
+    --color-10: #969696;
+    --color-11: #ffffff;
+    --color-12: #e0e0e0;
+    --color-13: #000000;
+    --color-14: #cacaca;
+    --color-15: #cacaca;
+    --color-16: #000000;
 }
+
 body {
     background-color: var(--color-1);
     transition: all 0.3s;
@@ -63,14 +81,14 @@ body {
     position: relative;
 }
 
-#changingMode {
+#themeBtn {
     position: absolute;
     top: 10px;
     left: 10px;
     cursor: pointer;
 }
 
-#changingMode i {
+#themeBtn i {
     color: #fff;
     width: 50px;
     height: 50px;
@@ -86,7 +104,7 @@ body {
     margin-top: 80px;
 }
 
-#answerPage textarea {
+#answerInput {
     width: 300px;
     resize: none;
     border: none;
@@ -98,10 +116,10 @@ body {
 }
 
 #calculator {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
-.numbers {
+.buttons {
     color: var(--color-4);
     background-color: var(--color-1);
     width: 60px;
@@ -118,7 +136,7 @@ body {
     user-select: none;
 }
 
-.numbers:hover {
+.buttons:hover {
     background-color: var(--color-12);
     scale: 1.1;
     transition: all 0.2s;
@@ -150,6 +168,23 @@ body {
 .specialStyle {
     background-color: var(--color-5);
     color: var(--color-6);
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: poppins;
+    font-size: 20px;
+    user-select: none;
+}
+
+.specialStyle:hover {
+    scale: 1.1;
+    transition: all 0.2s;
 }
 
 .differentStyle {
@@ -177,8 +212,12 @@ body {
     user-select: none;
 }
 
-.math-operators:hover{
+.math-operators:hover {
     background-color: var(--color-12);
     scale: 1.1;
     transition: all 0.2s;
+}
+
+.mg {
+    margin-right: 0px;
 }
